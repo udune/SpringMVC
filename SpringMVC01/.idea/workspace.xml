@@ -11,8 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6393326a-0fda-40c4-bdd9-cce1fcedb92c" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/board/entity/board.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/board/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/board/mapper/BoardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/board/mapper/BoardMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/board/mapper/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/kr/board/mapper/BoardMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/boardList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/boardList.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +91,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.37869823&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.applicationServers&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -92,6 +103,7 @@
       <recent name="C:\Users\udune\Desktop\Web\SpringMVC\SpringMVC01\src\main\webapp\WEB-INF\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\udune\Desktop\Web\SpringMVC\SpringMVC01\src\main\resources\kr\board\mapper" />
       <recent name="C:\Users\udune\Desktop\Web\SpringMVC\SpringMVC01\src\main\java\kr\board\mapper" />
     </key>
   </component>
@@ -141,6 +153,8 @@
       <workItem from="1756636059460" duration="3070000" />
       <workItem from="1756733316212" duration="4011000" />
       <workItem from="1756795563944" duration="1087000" />
+      <workItem from="1756881143867" duration="7890000" />
+      <workItem from="1756891700752" duration="1075000" />
     </task>
     <servers />
   </component>
