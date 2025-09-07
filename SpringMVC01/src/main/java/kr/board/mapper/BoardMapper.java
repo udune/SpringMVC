@@ -8,4 +8,5 @@ import java.util.List;
 @Mapper
 public interface BoardMapper {
     public List<Board> getLists(); // 전체리스트
+    public void boardInsert(Board vo); // 글쓰기
 }
