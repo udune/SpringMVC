@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -32,5 +33,15 @@ public class BoardController {
     public String boardInsert(Board vo) { // title, content, writer => 파라메터 수집 (Board)
         mapper.boardInsert(vo);
         return "redirect:boardList.do"; // redirect
+    }
+
+    @GetMapping("/boardContent.do")
+    public String boardContent(
+            @RequestParam("idx") int idx,
+            Model model
+    ) {
+        Board vo = mapper.boardContent(idx);
+        model.addAttribute("vo", vo);
+        return "boardContent"; // /WEB-INF/views/boardContent.jsp
     }
 }
