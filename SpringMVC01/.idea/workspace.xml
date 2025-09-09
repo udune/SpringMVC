@@ -11,11 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6393326a-0fda-40c4-bdd9-cce1fcedb92c" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/boardUpdate.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kr/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/board/controller/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kr/board/mapper/BoardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/board/mapper/BoardMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/kr/board/mapper/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/kr/board/mapper/BoardMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/boardContent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/boardContent.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/boardList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/boardList.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +156,9 @@
       <workItem from="1756891700752" duration="1075000" />
       <workItem from="1757000298907" duration="1881000" />
       <workItem from="1757251147199" duration="7800000" />
-      <workItem from="1757337349720" duration="5477000" />
+      <workItem from="1757337349720" duration="5627000" />
+      <workItem from="1757346219361" duration="2003000" />
+      <workItem from="1757412317244" duration="1293000" />
     </task>
     <servers />
   </component>

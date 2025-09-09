@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
 <html>
 <head>
     <title>Spring MVC01</title>
@@ -25,7 +26,7 @@
                             <td>${vo.idx}</td>
                             <td><a href="boardContent.do?idx=${vo.idx}">${vo.title}</a></td>
                             <td>${vo.writer}</td>
-                            <td>${vo.indate}</td>
+                            <td>${fn:split(vo.indate, " ")[0]}</td>
                             <td>${vo.count}</td>
                         </tr>
                     </c:forEach>
