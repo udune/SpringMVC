@@ -34,10 +34,17 @@
             $.each(data, function(index, obj) {
                 listHtml += "<tr>";
                 listHtml += "<td>"+obj.idx+"</td>";
-                listHtml += "<td>"+obj.title+"</td>";
+                listHtml += "<td><a href='javascript:goContent("+obj.idx+")'>"+obj.title+"</a></td>";
                 listHtml += "<td>"+obj.writer+"</td>";
                 listHtml += "<td>"+obj.indate+"</td>";
                 listHtml += "<td>"+obj.count+"</td>";
+                listHtml += "</tr>";
+
+                listHtml += "<tr id='c"+obj.idx+"' style='display: none'>";
+                listHtml += "<td>내용</td>";
+                listHtml += "<td colspan='4'>";
+                listHtml += "<textarea rows='7' class='form-control'>"+obj.content+"</textarea>";
+                listHtml += "</td>";
                 listHtml += "</tr>";
             });
 
@@ -48,6 +55,9 @@
             listHtml += "</tr>";
             listHtml += "</table>";
             $("#view").html(listHtml);
+
+            $("#view").css("display", "block");
+            $("#wform").css("display", "none");
         }
         function goForm() {
             $("#view").css("display", "none");
@@ -56,6 +66,31 @@
         function goList() {
             $("#view").css("display", "block");
             $("#wform").css("display", "none");
+        }
+        function goInsert() {
+            // var title = $("#title").val();
+            // var content = $("#content").val();
+            // var writer = $("#writer").val();
+
+            var fData = $("#frm").serialize();
+            // alert(fData);
+            $.ajax({
+                url: "boardInsert.do",
+                type: "post",
+                data: fData,
+                success: loadList,
+                error: function() { alert("error"); }
+            })
+
+            // 입력폼 초기화
+            // $("#title").val("");
+            // $("#content").val("");
+            // $("#writer").val("");
+            $("#fclear").trigger("click");
+        }
+
+        function goContent(idx) { // idx = 11, 10, 9
+            $("#c"+idx).css("display", "table-row"); // 보이게
         }
     </script>
 </head>
@@ -66,24 +101,24 @@
             <div class="card-header">BOARD</div>
             <div class="card-body" id="view">Panel Body</div>
             <div class="card-body" id="wform" style="display: none">
-                <form action="boardInsert.do" method="post">
+                <form id="frm">
                     <table class="table">
                         <tr>
                             <td>제목</td>
-                            <td><input type="text" name="title" class="form-control"/></td>
+                            <td><input type="text" id="title" name="title" class="form-control"/></td>
                         </tr>
                         <tr>
                             <td>내용</td>
-                            <td><textarea rows="7" class="form-control" name="content"></textarea></td>
+                            <td><textarea rows="7" class="form-control" id="content" name="content"></textarea></td>
                         </tr>
                         <tr>
                             <td>작성자</td>
-                            <td><input type="text" name="writer" class="form-control"/></td>
+                            <td><input type="text" id="writer" name="writer" class="form-control"/></td>
                         </tr>
                         <tr>
                             <td colspan="2" align="center">
-                                <button type="submit" class="btn btn-success btn-sm">등록</button>
-                                <button type="reset" class="btn btn-warning btn-sm">취소</button>
+                                <button type="button" class="btn btn-success btn-sm" onclick="goInsert()">등록</button>
+                                <button type="reset" class="btn btn-warning btn-sm" id="fclear">취소</button>
                                 <button type="button" class="btn btn-danger btn-sm" onclick="goList()">리스트</button>
                             </td>
                         </tr>
